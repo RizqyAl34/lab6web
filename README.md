@@ -6,96 +6,145 @@
 
 ## REFACTOR LAYOUT PRAKTIKUM 4
 # Code:
-```     <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Layout sederhana</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div id="container">
-            <header>
-                <h1>Layout Bootstrap</h1>
-            </header>
-            <nav>
-                <a href="home.html" class="active">Home</a>
-                <a href="artikel.html">Artikel</a>
-                <a href="about.html">About</a>
-                <a href="kontak.html">Kontak</a>
-            </nav>
-            <section id="hero">
-                <h1>Hello World</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates velit qui illo pariatur doloribus voluptatem sit similique ducimus sint perspiciatis nihil facilis maxime excepturi reprehenderit labore tenetur, dolorem earum necessitatibus.</p>
-                <a href="home.html" class="btn btn-large">Learn more &raquo;</a>
-            </section>
-            <section id="wrapper">
-                <section id="main">
-                    <div class="row">
-                        <div class="box">
-                            <img src="https://dummyimage.com/120/db7d25/fff.png" alt=""
-            class="image-circle">
-                            <h3>Heading</h3>
-                            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis
-            euismod.</p>
-                            <a href="#" class="btn btn-default">View detail</a>
-                    </div>
-                    <div class="box">
-                            <img src="https://dummyimage.com/120/3e73e6/fff.png" alt=""
-            class="image-circle">
-                            <h3>Heading</h3>
-                            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis
-            euismod.</p>
-                            <a href="#" class="btn btn-default">View detail</a>
-                    </div>
-                    <div class="box">
-                            <img src="https://dummyimage.com/120/71e6d4/fff.png" alt=""
-            class="image-circle">
-                            <h3>Heading</h3>
-                            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis
-            euismod.</p>
-                            <a href="#" class="btn btn-default">View detail</a>
-                        </div>
-                    </div>
-                    <hr class="divider" />
-                    <article class="entry">
-                        <h2>First feature heading</h2>
-                        <img src="https://dummyimage.com/150/7b8a70/fff.png" alt="">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos cum, saepe eveniet natus earum adipisci labore! Praesentium soluta aperiam excepturi, ratione similique est atque natus. Veniam quasi ea dolores aspernatur?</p>
-                    </article>
-                    <hr class="divider" />
-                    <article class="entry">
-                        <h2>First featurette heading</h2>
-                        <img src="https://dummyimage.com/150/7b8a70/fff.png" alt=""
-                    class="right-img">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur aliquid aut omnis tempore voluptatibus est aliquam, optio odit, et dolorem amet! Aliquam nisi a corrupti doloremque voluptate commodi nulla similique.</p>
-                    </article>
-                    </section>
-                <aside id="sidebar">
-                    <div class="widget-box">
-                        <h3 class="title">Widget Header</h3>
-                        <ul>
-                            <li><a href="#">Widget Link</a></li>
-                            <li><a href="#">Widget Link</a></li>
-                            <li><a href="#">Widget Link</a></li>
-                            <li><a href="#">Widget Link</a></li>
-                            <li><a href="#">Widget Link</a></li>
-                        </ul>    
-                    </div>
-                    <div class="widget-box">
-                        <h3 class="title">Widget Text</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, optio voluptates. Dolores libero culpa perspiciatis minima ipsum consequatur magnam reiciendis voluptas animi, quam sunt, deserunt eum. Dolorem quis magni perferendis.</p>
-                    </div>
-                </aside>
-            </section>
-            <footer>
-            <p>&copy; 2021 - Universitas Pelita Bangsa</p>
-            </footer>
+```    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Sederhana (Bootstrap)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-4">
+    <!-- Header -->
+    <header class="text-center mb-4">
+      <h1 class="fw-bold">Layout Sederhana</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 rounded">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a href="lab4_layout.html" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="artikel.html" class="nav-link">Artikel</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="kontak.html" class="nav-link">Kontak</a></li>
+          </ul>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-    </html>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="p-5 mb-4 bg-light rounded-3 text-center">
+      <h1 class="display-5 fw-bold">Hello World!</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat provident ut animi enim consectetur.</p>
+      <a href="home.html" class="btn btn-primary btn-lg">Learn more &raquo;</a>
+    </section>
+
+    <!-- Main Content -->
+    <div class="row">
+      <main class="col-md-8">
+        <!-- 3 Box -->
+        <div class="row text-center mb-4">
+          <div class="col-md-4 mb-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="https://dummyimage.com/120/db7d25/fff.png" class="rounded-circle mx-auto mt-3" width="120" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Heading</h5>
+                <p class="card-text">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                <a href="#" class="btn btn-outline-primary">View Detail</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="https://dummyimage.com/120/3e73e6/fff.png" class="rounded-circle mx-auto mt-3" width="120" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Heading</h5>
+                <p class="card-text">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                <a href="#" class="btn btn-outline-primary">View Detail</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card border-0 shadow-sm h-100">
+              <img src="https://dummyimage.com/120/71e6d4/fff.png" class="rounded-circle mx-auto mt-3" width="120" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Heading</h5>
+                <p class="card-text">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                <a href="#" class="btn btn-outline-primary">View Detail</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- Artikel 1 -->
+        <article class="mb-4">
+          <div class="row align-items-center">
+            <div class="col-md-4">
+              <img src="https://dummyimage.com/150/7b8a70/fff.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="col-md-8">
+              <h2>First Featurette heading.</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odit porro molestiae deleniti perspiciatis veritatis minima ipsum.</p>
+            </div>
+          </div>
+        </article>
+
+        <hr>
+
+        <!-- Artikel 2 -->
+        <article class="mb-4">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h2>Second Featurette heading.</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odit porro molestiae deleniti perspiciatis veritatis minima ipsum.</p>
+            </div>
+            <div class="col-md-4">
+              <img src="https://dummyimage.com/150/7b8a70/fff.png" class="img-fluid rounded" alt="">
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header bg-primary text-white">Widget Header</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#">Widget Link</a></li>
+            <li class="list-group-item"><a href="#">Widget Link</a></li>
+            <li class="list-group-item"><a href="#">Widget Link</a></li>
+            <li class="list-group-item"><a href="#">Widget Link</a></li>
+            <li class="list-group-item"><a href="#">Widget Link</a></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header bg-primary text-white">Widget Text</div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, adipisci. Ab odio nobis mollitia nisi alias sequi ipsum.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4 rounded">
+      <p class="mb-0">&copy; 2021 - Universitas Pelita Bangsa</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 ```
 
 # Hasil:
